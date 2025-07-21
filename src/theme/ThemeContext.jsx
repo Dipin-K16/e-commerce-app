@@ -25,7 +25,7 @@ const ThemeProviderWrapper = ({ children }) => {
             ? {
                 // Light mode
                 primary: {
-                  main: '#2E7D32',
+                  main: '#035607ff',
                   light: '#4CAF50',
                   dark: '#1B5E20',
                   contrastText: '#FFFFFF',
@@ -37,7 +37,7 @@ const ThemeProviderWrapper = ({ children }) => {
                   contrastText: '#FFFFFF',
                 },
                 background: {
-                  default: '#F5F5F5',
+                  default: '#f7f7f7f4',
                   paper: '#FFFFFF',
                 },
                 text: {
