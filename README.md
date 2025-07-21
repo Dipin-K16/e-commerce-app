@@ -1,12 +1,58 @@
-# React + Vite
+# E-Commerce Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive e-commerce application built with React and Material UI for an interview task. The application includes a login page, product listing, and shopping cart functionality.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- User authentication (simplified for demo)
+- Product listing with mock data
+- Shopping cart functionality
+- Responsive design for mobile and desktop
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- Material UI
+- React Router
+- Local Storage for cart persistence
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v14 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+### Running the Application
+
+```bash
+npm run dev
+```
+
+The application will be available at http://localhost:5173
+
+## Application Structure
+
+- `/src/pages` - Main page components
+- `/src/components` - Reusable UI components
+- `/src/assets` - Static assets
+
+## Usage
+
+1. Login with any email and password (no validation for demo)
+2. Browse products on the products page
+3. Add products to cart
+4. View and manage cart items
+
+## Responsive Design
+
+The application is fully responsive and works on both desktop and mobile devices.
