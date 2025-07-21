@@ -9,7 +9,7 @@ const ThemeProviderWrapper = ({ children }) => {
   const colorMode = useMemo(
     () => ({
       toggleColorMode: () => {
-        setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
+        setMode((prevMode) => (prevMode === 'light' ? 'light' : 'light'));
       },
       mode,
     }),
@@ -25,9 +25,9 @@ const ThemeProviderWrapper = ({ children }) => {
             ? {
                 // Light mode
                 primary: {
-                  main: '#2E7D32',
-                  light: '#4CAF50',
-                  dark: '#1B5E20',
+                  main: '#1B5E20',
+                  light: '#2E7D32',
+                  dark: '#0A3D0A',
                   contrastText: '#FFFFFF',
                 },
                 secondary: {
@@ -37,7 +37,7 @@ const ThemeProviderWrapper = ({ children }) => {
                   contrastText: '#FFFFFF',
                 },
                 background: {
-                  default: '#F5F5F5',
+                  default: '#f5f5f0',
                   paper: '#FFFFFF',
                 },
                 text: {
@@ -48,9 +48,9 @@ const ThemeProviderWrapper = ({ children }) => {
             : {
                 // Dark mode
                 primary: {
-                  main: '#4CAF50',
-                  light: '#81C784',
-                  dark: '#388E3C',
+                  main: '#2E7D32',
+                  light: '#4CAF50',
+                  dark: '#1B5E20',
                   contrastText: '#FFFFFF',
                 },
                 secondary: {
@@ -126,6 +126,7 @@ const ThemeProviderWrapper = ({ children }) => {
             styleOverrides: {
               root: {
                 boxShadow: '0px 1px 4px rgba(0, 0, 0, 0.1)',
+                backgroundColor:"#3d3d29"
               },
             },
           },

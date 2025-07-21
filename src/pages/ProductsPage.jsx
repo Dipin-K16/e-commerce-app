@@ -84,13 +84,14 @@ const ProductsPage = () => {
               <Card
                 sx={{
                   height: "100%",
-                  width: 300,
+                  width: { xs: 240, sm: 260, md: 270 },
                   display: "flex",
                   flexDirection: "column",
+                  boxShadow: 3,
                   transition: "transform 0.2s ease-in-out",
                   "&:hover": {
                     transform: "translateY(-5px)",
-                    boxShadow: 6,
+                    boxShadow: 16,
                     cursor: "pointer",
                   },
                   borderRadius: 2,
@@ -99,13 +100,13 @@ const ProductsPage = () => {
               >
                 <CardMedia
                   component="img"
-                  height="200"
+                  height="170"
                   image={product.image}
                   alt={product.title}
                   sx={{
                     objectFit: "contain",
                     p: 2,
-                    backgroundColor: "#f5f5f5",
+                    backgroundColor: "#fffff",
                   }}
                 />
                 <CardContent sx={{ flexGrow: 1, p: 2 }}>

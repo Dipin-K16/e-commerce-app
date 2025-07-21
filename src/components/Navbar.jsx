@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from 'react';
+import { useState, useEffect } from 'react';
 import { 
   AppBar, 
   Toolbar, 
@@ -16,14 +16,14 @@ import {
   useTheme
 } from '@mui/material';
 import { ShoppingCart, Menu, Brightness4, Brightness7 } from '@mui/icons-material';
-import ColorModeContext from '../theme/ColorModeContext';
+// import ColorModeContext from '../theme/ColorModeContext';
 import { Link, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const [cartCount, setCartCount] = useState(0);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const theme = useTheme();
-  const colorMode = useContext(ColorModeContext);
+  // const colorMode = useContext(ColorModeContext);
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const navigate = useNavigate();
 
@@ -84,7 +84,7 @@ const Navbar = () => {
   );
 
   return (
-    <AppBar position="static">
+    <AppBar position="sticky">
       <Toolbar>
         <Typography
           variant="h6"
@@ -111,13 +111,13 @@ const Navbar = () => {
                 <ShoppingCart />
               </Badge>
             </IconButton>
-            <IconButton 
+            {/* <IconButton 
               color="inherit"
               onClick={colorMode.toggleColorMode} 
               sx={{ mr: 1 }}
             >
               {theme.palette.mode === 'dark' ? <Brightness7 /> : <Brightness4 />}
-            </IconButton>
+            </IconButton> */}
             <IconButton
               color="inherit"
               edge="end"
@@ -148,9 +148,9 @@ const Navbar = () => {
                 <ShoppingCart />
               </Badge>
             </IconButton>
-            <IconButton sx={{ ml: 1 }} onClick={colorMode.toggleColorMode} color="inherit">
+            {/* <IconButton sx={{ ml: 1 }} onClick={colorMode.toggleColorMode} color="inherit">
               {theme.palette.mode === 'dark' ? <Brightness7 /> : <Brightness4 />}
-            </IconButton>
+            </IconButton> */}
             <Button color="inherit" onClick={handleLogout} sx={{ ml: 1 }}>
               Logout
             </Button>
