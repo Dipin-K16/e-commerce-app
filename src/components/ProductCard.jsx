@@ -1,9 +1,29 @@
-import { Grid, Card, CardMedia, CardContent, CardActions, Typography, Button, Box, Tooltip, Chip } from "@mui/material";
+import { Grid, Card, CardMedia, CardContent, CardActions, Typography, Button, Box, Tooltip, Chip, IconButton } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import { useState, useEffect } from 'react';
 
 const ProductCard = ({ filteredProducts, handleAddToCart }) => {
   const navigate = useNavigate();
+  const [wishlist, setWishlist] = useState([]);
+
+  useEffect(() => {
+    const saved = JSON.parse(localStorage.getItem('wishlist') || '[]');
+    setWishlist(saved);
+  }, []);
+
+  const handleWishlistToggle = (product) => {
+    let updated;
+    if (wishlist.some((item) => item.id === product.id)) {
+      updated = wishlist.filter((item) => item.id !== product.id);
+    } else {
+      updated = [...wishlist, product];
+    }
+    setWishlist(updated);
+    localStorage.setItem('wishlist', JSON.stringify(updated));
+  };
 
   return (
     <Grid
@@ -40,6 +60,20 @@ const ProductCard = ({ filteredProducts, handleAddToCart }) => {
             }}
             onClick={() => navigate(`/product/${product.id}`)}
           >
+            <Box sx={{ position: 'absolute', top: 10, right: 10, zIndex: 2 }}>
+              <Tooltip title={wishlist.some((item) => item.id === product.id) ? "Remove from Wishlist" : "Add to Wishlist"}>
+                <IconButton
+                  onClick={e => {
+                    e.stopPropagation();
+                    handleWishlistToggle(product);
+                  }}
+                  color={wishlist.some((item) => item.id === product.id) ? 'error' : 'default'}
+                  sx={{ background: '#fff', boxShadow: 1, '&:hover': { background: '#ffe0e0' } }}
+                >
+                  {wishlist.some((item) => item.id === product.id) ? <FavoriteIcon /> : <FavoriteBorderIcon />}
+                </IconButton>
+              </Tooltip>
+            </Box>
             <Tooltip title="Click to view product details" placement="top">
               <Box
                 sx={{

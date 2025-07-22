@@ -9,6 +9,7 @@ import ProductDetailPage from './pages/ProductDetailPage'
 
 import Navbar from './components/Navbar'
 import ThemeProviderWrapper from './theme/ThemeContext'
+import Footer from './components/Footer'
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
@@ -70,6 +71,7 @@ function App() {
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </BrowserRouter>
+      <Footer />
     </ThemeProviderWrapper>
   )
 }
