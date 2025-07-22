@@ -11,7 +11,6 @@ import {
   Divider,
   List,
   ListItem,
-  ListItemText,
   ListItemAvatar,
   Avatar,
 } from "@mui/material";

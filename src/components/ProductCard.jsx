@@ -1,4 +1,3 @@
-import React from "react";
 import { Grid, Card, CardMedia, CardContent, CardActions, Typography, Button, Box, Tooltip, Chip } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
@@ -27,10 +26,9 @@ const ProductCard = ({ filteredProducts, handleAddToCart }) => {
               display: "flex",
               flexDirection: "column",
               transition: "transform 0.25s cubic-bezier(.4,2,.6,1)",
-              boxShadow: "0px 4px 12px rgba(1, 151, 39, 0.24)",
+              boxShadow: "0px 4px 10px rgba(0, 128, 32, 0.21)",
               borderRadius: 3,
-              border: "0.5px solid rgba(2, 86, 16, 0.14)",
-              background: "linear-gradient(180deg, #ffffffff 30%,rgba(224, 224, 224, 0.47) 100%)",
+              background: "linear-gradient(180deg, #ffffffff 20%,rgba(191, 191, 191, 0.59) 100%)",
               position: "relative",
               overflow: "hidden",
               "&:hover": {
