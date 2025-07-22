@@ -9,7 +9,7 @@ const ThemeProviderWrapper = ({ children }) => {
   const colorMode = useMemo(
     () => ({
       toggleColorMode: () => {
-        setMode((prevMode) => (prevMode === 'light' ? 'light' : 'light'));
+        setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
       },
       mode,
     }),
