@@ -29,7 +29,7 @@ const ProductCard = ({ filteredProducts, handleAddToCart }) => {
               transition: "transform 0.25s cubic-bezier(.4,2,.6,1)",
               boxShadow: "0px 4px 12px rgba(1, 151, 39, 0.24)",
               borderRadius: 3,
-              border: "1px solidrgba(2, 86, 16, 0.74)",
+              border: "0.5px solid rgba(2, 86, 16, 0.14)",
               background: "linear-gradient(180deg, #ffffffff 30%,rgba(224, 224, 224, 0.47) 100%)",
               position: "relative",
               overflow: "hidden",
@@ -62,7 +62,7 @@ const ProductCard = ({ filteredProducts, handleAddToCart }) => {
                     height: 120,
                     borderRadius: 3,
                     background: "#ffffffff",
-                    boxShadow: "0 2px 8px rgba(56, 142, 60, 0.04)",
+                    boxShadow: "0px 0px 8px rgba(56, 142, 60, 0.04)",
                     p: 1,
                   }}
                 />
