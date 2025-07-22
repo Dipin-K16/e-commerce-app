@@ -27,10 +27,10 @@ const ProductCard = ({ filteredProducts, handleAddToCart }) => {
               display: "flex",
               flexDirection: "column",
               transition: "transform 0.25s cubic-bezier(.4,2,.6,1)",
-              boxShadow: "0px 4px 12px rgba(1, 151, 38, 0.35)",
+              boxShadow: "0px 4px 12px rgba(1, 151, 39, 0.24)",
               borderRadius: 3,
               border: "1px solidrgba(2, 86, 16, 0.74)",
-              background: "linear-gradient(180deg, #ffffffff 80%,rgba(224, 224, 224, 0.29) 100%)",
+              background: "linear-gradient(180deg, #ffffffff 30%,rgba(224, 224, 224, 0.47) 100%)",
               position: "relative",
               overflow: "hidden",
               "&:hover": {

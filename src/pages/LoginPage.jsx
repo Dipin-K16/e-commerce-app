@@ -115,11 +115,11 @@ const LoginPage = () => {
               fontWeight: 700,
               fontSize: "1.1rem",
               borderRadius: 3,
-              background: "linear-gradient(90deg, #388e3c 80%, #FFC107 100%)",
+              background: "linear-gradient(90deg, #388e3c 80%, #2e7d32 100%)",
               color: "#fff",
               boxShadow: "0 2px 8px rgba(56,142,60,0.08)",
               "&:hover": {
-                background: "linear-gradient(90deg, #2e7d32 80%, #FFA000 100%)",
+                background: "linear-gradient(90deg, #2e7d32 80%, #2e7d32 100%)",
                 boxShadow: "0 6px 16px rgba(255,193,7,0.10)",
               },
             }}

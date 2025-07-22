@@ -37,7 +37,7 @@ const ThemeProviderWrapper = ({ children }) => {
                   contrastText: '#FFFFFF',
                 },
                 background: {
-                  default: '#f7f7f7f4',
+                  default:"rgba(255, 255, 255, 1)",
                   paper: '#FFFFFF',
                 },
                 text: {
